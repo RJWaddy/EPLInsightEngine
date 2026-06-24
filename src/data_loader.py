@@ -3,6 +3,8 @@ import glob
 
 def load_data():
     files = glob.glob("../data/raw/*.csv")
+    print(files)
+    print("Hello")
     dfs = []
 
     for file in files:
@@ -11,5 +13,5 @@ def load_data():
 
     epl_data = pd.concat(dfs, ignore_index=True)
 
-    print(epl_data.count())
+    return epl_data
 
